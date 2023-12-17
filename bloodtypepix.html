@@ -1,0 +1,77 @@
+<style>
+  .c {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 54vh;
+    width: 100vw;
+  }
+
+  .c img {
+    max-height: 50vh;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .p {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .p img {
+    margin: auto;
+    max-height: 80%;
+  }
+
+  .cl {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font: 35px/1 sans-serif;
+  }
+</style>
+
+<div class="c">
+  <img src="https://bit.ly/3RJSwCh" onclick="showModal(0)">
+  <img src="https://bit.ly/3RJSwCh" onclick="showModal(1)">
+  <img src="https://bit.ly/3RJSwCh" onclick="showModal(2)">
+  <img src="https://bit.ly/3RJSwCh" onclick="showModal(3)">
+</div>
+
+<div id="p0" class="p" onclick="hideModal(0)">
+  <span class="cl">×</span>
+  <img style="max-height: 100%;">
+</div>
+
+<div id="p1" class="p" onclick="hideModal(1)">
+  <span class="cl">×</span>
+  <img style="max-height: 100%;">
+</div>
+
+<div id="p2" class="p" onclick="hideModal(2)">
+  <span class="cl">×</span>
+  <img style="max-height: 100%;">
+</div>
+
+<div id="p3" class="p" onclick="hideModal(3)">
+  <span class="cl">×</span>
+  <img style="max-height: 100%;">
+</div>
+
+<script>
+  function showModal(index) {
+    document.getElementById('p' + index).style.display = 'block';
+    document.getElementById('p' + index + ' img').src = 'https://bit.ly/3RJSwCh';
+  }
+
+  function hideModal(index) {
+    document.getElementById('p' + index).style.display = 'none';
+  }
+</script>
